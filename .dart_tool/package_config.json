@@ -92,12 +92,6 @@
       "languageVersion": "1.11"
     },
     {
-      "name": "smart_flare",
-      "rootUri": "file:///home/morgadoo/.pub-cache/hosted/pub.dartlang.org/smart_flare-0.2.9+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
-    },
-    {
       "name": "source_span",
       "rootUri": "file:///home/morgadoo/.pub-cache/hosted/pub.dartlang.org/source_span-1.7.0",
       "packageUri": "lib/",
@@ -152,7 +146,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-06-06T00:49:52.758395Z",
+  "generated": "2020-06-06T00:55:03.657007Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-13.0.dev.flutter-62903873df"
 }
