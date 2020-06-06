@@ -1,4 +1,4 @@
-#Sat Jun 06 01:52:20 WEST 2020
+#Sat Jun 06 10:17:35 WEST 2020
 base.0=/home/morgadoo/Documentos/Github/Flutter/flutter_app/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
