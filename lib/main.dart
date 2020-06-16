@@ -39,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
           colors: [Colors.purple, Colors.blue])
           ),
         ),
-      )
     );
   }
 
