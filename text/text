@@ -1,0 +1,28 @@
+child: Center(
+            child: FlareActor('assets/Cosmos.flr', animation: 'Untitled'),
+          ),
+
+
+
+  assets:
+     - Penguin.flr
+     - Loading.flr
+     - Cosmos.flr
+     - space.flr
+
+
+flare_flutter: ^2.0.3
+
+import 'package:flare_flutter/flare_actor.dart';
+
+
+
+
+----------
+
+decoration: BoxDecoration(
+          gradient: LinearGradient(
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+          colors: [Colors.purple, Colors.blue])
+          ),
