@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(height: 30),
             Text('Olá Luís', style: kHeadingextStyle),
-            Text('Encontra um curso a tua medida', style: kSubheadingextStyle),
+            Text('Encontra um curso à tua medida', style: kSubheadingextStyle),
           ],
         ),
       ),
