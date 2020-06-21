@@ -1,0 +1,849 @@
+{
+	"version": 24,
+	"artboards": [
+		{
+			"name": "Artboard",
+			"translation": [
+				-250,
+				250
+			],
+			"width": 360,
+			"height": 360,
+			"origin": [
+				-0.02933318167924881,
+				-0.02933318354189396
+			],
+			"clipContents": true,
+			"color": [
+				0.364705890417099,
+				0.364705890417099,
+				0.364705890417099,
+				1
+			],
+			"nodes": [
+				{
+					"name": "Circle",
+					"translation": [
+						154.63153076171875,
+						154.4210662841797
+					],
+					"rotation": 0,
+					"scale": [
+						0.9989473819732666,
+						0.9989473819732666
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 1,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "circle",
+					"parent": 0,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 250,
+					"height": 250,
+					"type": "ellipse"
+				},
+				{
+					"name": "Color",
+					"parent": 0,
+					"opacity": 1,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"width": 25,
+					"cap": 0,
+					"join": 0,
+					"trim": 0,
+					"type": "colorStroke"
+				},
+				{
+					"name": "Rettangolo 1",
+					"translation": [
+						300,
+						300
+					],
+					"rotation": -0.7853981633974483,
+					"scale": [
+						0.8999999761581421,
+						0.8999999761581421
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 2,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 3,
+					"opacity": 1,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"fillRule": 0,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 3,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"bones": [],
+					"isVisible": true,
+					"isClosed": true,
+					"points": [
+						{
+							"pointType": 0,
+							"translation": [
+								-12.5,
+								-100
+							],
+							"radius": 12.5
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								12.5,
+								-100
+							],
+							"radius": 12.5
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								12.5,
+								100
+							],
+							"radius": 12.5
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								-12.5,
+								100
+							],
+							"radius": 12.5
+						}
+					],
+					"type": "path"
+				},
+				{
+					"name": "Rettangolo 2",
+					"translation": [
+						300,
+						300
+					],
+					"rotation": -0.7853981633974483,
+					"scale": [
+						0.8999999761581421,
+						0.8999999761581421
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 3,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 6,
+					"opacity": 1,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"fillRule": 0,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 6,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"bones": [],
+					"isVisible": true,
+					"isClosed": true,
+					"points": [
+						{
+							"pointType": 0,
+							"translation": [
+								-12.5,
+								-100
+							],
+							"radius": 12.5
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								12.5,
+								-100
+							],
+							"radius": 12.5
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								12.5,
+								100
+							],
+							"radius": 12.5
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								-12.5,
+								100
+							],
+							"radius": 12.5
+						}
+					],
+					"type": "path"
+				}
+			],
+			"animations": [
+				{
+					"name": "idle",
+					"fps": 60,
+					"duration": 0.11666666666666667,
+					"isLooping": false,
+					"keyed": [
+						{
+							"component": 0
+						},
+						{
+							"component": 2,
+							"strokeColor": [
+								[
+									{
+										"time": 0.11666666666666667,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						},
+						{
+							"component": 3
+						},
+						{
+							"component": 4,
+							"fillColor": [
+								[
+									{
+										"time": 0.11666666666666667,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						},
+						{
+							"component": 6
+						},
+						{
+							"component": 7,
+							"fillColor": [
+								[
+									{
+										"time": 0.11666666666666667,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						}
+					],
+					"animationStart": 0,
+					"animationEnd": 0.11666666666666667,
+					"type": "animation"
+				},
+				{
+					"name": "close_search",
+					"fps": 60,
+					"duration": 0.35,
+					"isLooping": false,
+					"keyed": [
+						{
+							"component": 0,
+							"scaleX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 0
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 0
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									}
+								]
+							]
+						},
+						{
+							"component": 2,
+							"strokeOpacity": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 0
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 1
+									}
+								]
+							],
+							"strokeColor": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						},
+						{
+							"component": 3,
+							"posX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 189.5599365234375
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 252.7269287109375
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 300
+									}
+								]
+							],
+							"posY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 191.5599365234375
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 252.7269287109375
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 300
+									}
+								]
+							],
+							"rotation": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 0.7853981633974483
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": -0.7853981633974483
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": -0.7853981633974483
+									}
+								]
+							],
+							"scaleX": [
+								[
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 0.8999999165534973
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1.5
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 0.9038569331169128
+									}
+								]
+							]
+						},
+						{
+							"component": 4,
+							"fillColor": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						},
+						{
+							"component": 6,
+							"posX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 190.5599365234375
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 252.73
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 300
+									}
+								]
+							],
+							"posY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 190.5599365234375
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 252.73
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 300
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1.5
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 0.9
+									}
+								]
+							],
+							"rotation": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": -0.7853981633974483
+									}
+								]
+							]
+						},
+						{
+							"component": 7,
+							"fillColor": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						}
+					],
+					"animationStart": 0,
+					"animationEnd": 0.35,
+					"type": "animation"
+				},
+				{
+					"name": "search_close",
+					"fps": 60,
+					"duration": 0.35,
+					"isLooping": false,
+					"keyed": [
+						{
+							"component": 0,
+							"scaleX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0
+									}
+								]
+							]
+						},
+						{
+							"component": 2,
+							"strokeOpacity": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 0
+									}
+								]
+							],
+							"strokeColor": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						},
+						{
+							"component": 3,
+							"posX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 300
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 240
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 190.5599365234375
+									}
+								]
+							],
+							"posY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 300
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 240
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 190.5599365234375
+									}
+								]
+							],
+							"rotation": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": -0.7853981633974483
+									}
+								]
+							],
+							"scaleX": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 0.9
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 0.9
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 1.5
+									}
+								]
+							]
+						},
+						{
+							"component": 4,
+							"fillColor": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						},
+						{
+							"component": 6,
+							"posX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 300
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 240
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 190.5599365234375
+									}
+								]
+							],
+							"posY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 300
+									},
+									{
+										"time": 0.16666666666666666,
+										"interpolatorType": 1,
+										"value": 240
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 190.5599365234375
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 0.9
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 1.5
+									}
+								]
+							],
+							"rotation": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": -0.7853981633974483
+									},
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": 0.7853981633974483
+									}
+								]
+							]
+						},
+						{
+							"component": 7,
+							"fillColor": [
+								[
+									{
+										"time": 0.35,
+										"interpolatorType": 1,
+										"value": [
+											0,
+											0,
+											0,
+											1
+										]
+									}
+								]
+							]
+						}
+					],
+					"animationStart": 0,
+					"animationEnd": 0.35,
+					"type": "animation"
+				}
+			],
+			"type": "artboard"
+		}
+	]
+}
