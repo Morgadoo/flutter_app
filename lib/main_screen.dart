@@ -1,13 +1,22 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
+import 'package:flutter_app/main.dart';
 import 'package:flutter_app/constants.dart';
+import 'package:flutter_app/second_screen.dart';
 import 'package:flutter_app/model/category.dart';
+import 'package:flutter_app/model/courses.dart';
+
+
 
 class MyHomePage extends StatefulWidget {
+
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -18,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF000000),
+      backgroundColor: dBackGround,
       body: Padding(
         padding: EdgeInsets.only(left: 20, top: 40, right:20),
         child: Column(
@@ -27,7 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                SvgPicture.asset('assets/icons/menu.svg',height: 26,width: 26,color: dIconColor),
+                GestureDetector(
+                /*onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()),
+                  );
+                },*/
+                child: SvgPicture.asset('assets/icons/menu.svg',height: 26,width: 26,color: dIconColor),
+                ),
                 new Container(
                   width: 50,
                   height: 50,
@@ -92,6 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             SizedBox(height: 10),
+            
             Expanded(
               child: StaggeredGridView.countBuilder(
                 crossAxisCount: 2,
@@ -100,36 +118,54 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisSpacing: 16,
                 
                 itemBuilder: (context,index){
-                  return Container(
-                    padding: EdgeInsets.all(10),
-                    height: index.isEven ? 200 : 180,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: kBlueColor,
-                      image: DecorationImage(
-                        colorFilter: ColorFilter.mode(Color(0xFFb3b3b3), BlendMode.multiply),
-                        image: AssetImage(categories[index].image),
-                        fit: BoxFit.cover,
-
+                  return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsScreen(categoryId: index),
                       ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        Text(
-                          categories[index].name,
-                          style:kTitleTextMiniStyle,
+                    );
+                  },
+                    child: ClipRRect(
+                      
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        height: index.isEven ? 220 : 180,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: dBackGround,
+                          image: DecorationImage(
+                            colorFilter: ColorFilter.mode(Color(0xFFbfbfbf), BlendMode.multiply),
+                            image: AssetImage(categories[index].image),
+                            fit: BoxFit.cover,
                           ),
-                        Text(
-                          '${categories[index].numOfCourses} Cursos',
-                          style: TextStyle(
-                            color: Color(0xFFffffff).withOpacity(0.80),
+                        ),
+                        child:BackdropFilter(
+                          filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
+                          child:
+                          Container(
+                            color: Colors.black.withOpacity(0),
+                            child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Text(
+                                categories[index].name,
+                                style:kTitleTextMiniStyle,
+                                ),
+                              Text(
+                                '${categories[index].numOfCourses} Cursos',
+                                style: TextStyle(
+                                  color: Color(0xFFffffff).withOpacity(0.80),
+                                ),
+                              ),
+                            ],
+                        ),
                           ),
-                        )
-                    
-
-                      ],
+                        ),
+                        
+                      ),
                     ),
                   );
                 },

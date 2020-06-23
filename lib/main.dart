@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' ;
+
 import 'package:flutter_app/main_screen.dart';
+import 'package:flutter_app/model/courses.dart';
+
+class Todo {
+  final String title;
+  final int numero;
+
+  Todo(this.title, this.numero);
+}
+
 
 
 void main() {
+  
   runApp(MyApp());
 }
 
@@ -16,6 +27,9 @@ class MyApp extends StatelessWidget {
         DeviceOrientation.portraitUp,
       ]);
 
+//SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
+
+SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
     return MaterialApp(
       title: 'Curso APP',

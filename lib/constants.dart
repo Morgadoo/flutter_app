@@ -15,6 +15,7 @@ const dSubTextColor = Color(0xFF818181);
 const dIconColor = Color(0xFFFFFFFF);
 const dBoxColor = Color(0xFF383838);
 const dSelectBoxColor = Color(0xFF4D4D4D);
+const dBackGround = Color(0xFF000000);
 
 
 
@@ -47,7 +48,6 @@ const kTitleTextMiniStyle = TextStyle(
   color: dTextColor,
   fontWeight: FontWeight.bold,
 );
-
 
 
 /*getImagePalette () async {
