@@ -79,14 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Row(
                     children: <Widget>[
-                      //SvgPicture.asset("assets/icons/search.svg"),
                       Container(
                         width: 20,
                         height: 20,
                         child: FlareActor('assets/flare/search_to_close.flr',
                         color: dIconColor,
-                        animation: 
-                        //'idle'
+                        animation:
                         isOpen ? 'search_close' : 'close_search'),
                       ),
                       SizedBox(width: 16),
