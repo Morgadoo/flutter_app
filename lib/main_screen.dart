@@ -142,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         child:BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
+                          filter: ImageFilter.blur(sigmaX: 1.8, sigmaY: 1.8),
                           child:
                           Container(
                             color: Colors.black.withOpacity(0),
