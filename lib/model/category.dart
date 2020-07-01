@@ -17,7 +17,7 @@ var categoriesData = [
   {"name": "Programação", 'courses': 1, 'image': "assets/images/prog_h.png"},
   {"name": "Photoscan",'courses': 0,'image': "assets/images/phot_h.png"},
   {"name": "Criação de Personagens", 'courses': 0, 'image': "assets/images/pers_h.png"},
-  {"name": "Design de Jogos", 'courses': 0, 'image': "assets/images/game_h.png"},
+  {"name": "Game Design", 'courses': 0, 'image': "assets/images/game_h.png"},
   {"name": "Iluminação e Renderização", 'courses': 0, 'image': "assets/images/rend2_h.png"},
   {"name": "Modelação 3D", 'courses': 2, 'image': "assets/images/mod_h.png"},
 ];

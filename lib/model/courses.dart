@@ -7,61 +7,22 @@ class Course {
   final String created;
   final String image;
 
-
-  Course(this.id, this.indexID, this.name, this.numOfStudent, this.numOfStar, this.created, this.image);
-
+  Course(this.id, this.indexID, this.name, this.numOfStudent, this.numOfStar,
+      this.created, this.image);
 }
 
-/*
-List<Course> courses = coursesData
-    .map((item) => Course(item['id'],item['indexID'],item['name'], item['numOfStudent'], item['numOfStar'], item['created'], item['image']))
-    .toList();
-
 
 var coursesData = [
-  {"id": 1, 'indexID': 0,'name': "Curso 1 de Ambientes Virtuais", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/amb_h.png"},
-  {"id": 1, 'indexID': 1,'name': "Curso 2 de Ambientes Virtuais", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/amb_h.png"},
-  {"id": 1, 'indexID': 2,'name': "Curso 3 de Ambientes Virtuais", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/amb_h.png"},
-  {"id": 2, 'indexID': 0,'name': "Curso 1 de FX", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 2, 'indexID': 1,'name': "Curso 2 de FX", "numOfStudent": 1, "numOfStar": 2, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 2, 'indexID': 2,'name': "Curso 3 de FX", "numOfStudent": 1, "numOfStar": 3, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 2, 'indexID': 3,'name': "Curso 4 de FX", "numOfStudent": 1, "numOfStar": 4, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 3, 'indexID': 0,'name': "Curso 1 de Programação", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/prog_h.png"},
-  {"id": 4, 'indexID': 0,'name': "Curso 1 de Modelação 3D", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/mod_h.png"},
-  {"id": 4, 'indexID': 1,'name': "Curso 2 de Modelação 3D", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/mod_h.png"},
-];
+[[1, 0, "Mastering Environment Creation in Houdini", 2.2, 4.8,"James Hodgart","assets/images/amb_h.png","https://youtu.be/2-0B4ucP1Qg"], 
+ [1, 1, "Creating 3D Environments in Blender", 4.6, 4.6,"Rob Tuytel, Erik Selin","assets/images/amb_h2.png","https://www.udemy.com/course/blender-environments/"],
+ [1, 2, "Environment Design and Illustration", 4.4, 4.2,"Aaron Limonick","assets/images/amb_h3.png","https://www.thegnomonworkshop.com/tutorials/environment-design-and-illustration"]],
 
-var coursesData = [
-[{"id": 1, 'indexID': 0,'name': "Curso 1 de Ambientes Virtuais", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/amb_h.png"},
-  {"id": 1, 'indexID': 1,'name': "Curso 2 de Ambientes Virtuais", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/amb_h.png"},
-  {"id": 1, 'indexID': 2,'name': "Curso 3 de Ambientes Virtuais", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/amb_h.png"}],
+[[2, 0, "Introduction to FX in Houdini", 3.4, 4.2,"Saber Jlassi","assets/images/vfx_h.png","https://youtu.be/XzyqP2rXer0"],
+ [2, 1, "Futuristic UI Design in Houdini", 1.2, 3.8,"Russ Gautier","assets/images/vfx_h2.png","https://www.rebelway.net/fui-design-in-houdini"],
+ [2, 2, "FX Compositing in Nuke", 2.7, 4.6,"Nick Chamberlain","assets/images/vfx_h3.1.png","https://www.rebelway.net/nuke-for-fx"],
+ [2, 3, "Water FX in Houdini", 1.1, 4.9,"Igor Zanic","assets/images/vfx_h4.png","https://www.rebelway.net/water-fx-in-houdini"]],
 
-[{"id": 2, 'indexID': 0,'name': "Curso 1 de FX", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 2, 'indexID': 1,'name': "Curso 2 de FX", "numOfStudent": 1, "numOfStar": 2, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 2, 'indexID': 2,'name': "Curso 3 de FX", "numOfStudent": 1, "numOfStar": 3, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"},
-  {"id": 2, 'indexID': 3,'name': "Curso 4 de FX", "numOfStudent": 1, "numOfStar": 4, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"}],
- 
-[{"id": 2, 'indexID': 3,'name': "Curso 4 de FX", "numOfStudent": 1, "numOfStar": 4, 'created': "Criador 1", 'image': "assets/images/vfx_h.png"}],
-
-[{"id": 4, 'indexID': 0,'name': "Curso 1 de Modelação 3D", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/mod_h.png"},
-  {"id": 4, 'indexID': 1,'name': "Curso 2 de Modelação 3D", "numOfStudent": 1, "numOfStar": 1, 'created': "Criador 1", 'image': "assets/images/mod_h.png"}]
-];
-*/
-
-
-//List<Course> courses = coursesData.map((item) => Course(item['id'],item['indexID'],item['name'], item['numOfStudent'], item['numOfStar'], item['created'], item['image']));
-
-var coursesData = [
-[[1, 0, "Curso 1 de Ambientes Virtuais", 1, 1,"Criador 1","assets/images/amb_h.png"], 
- [1, 1, "Curso 2 de Ambientes Virtuais", 1, 1,"Criador 1","assets/images/amb_h.png"],
- [1, 2, "Curso 3 de Ambientes Virtuais", 1, 1,"Criador 1","assets/images/amb_h.png"]],
-
-[[2, 0, "Curso 1 de FX", 1, 1,"Criador 1","assets/images/vfx_h.png"],
- [2, 1, "Curso 2 de FX", 1, 1,"Criador 1","assets/images/vfx_h.png"],
- [2, 2, "Curso 3 de FX", 1, 1,"Criador 1","assets/images/vfx_h.png"],
- [2, 3, "Curso 4 de FX", 1, 1,"Criador 1","assets/images/vfx_h.png"]],
-
-[[3, 0, "Curso 1 de Programação", 1, 1,"Criador 1","assets/images/prog_h.png"]],
+[[3, 0, "Introduction to Flutter", 8.1, 4.7,"Google","assets/images/prog_h1.png","https://flutter.dev/docs/get-started/codelab"]],
 
 [[4, "Curso Photoscan"]],
 
@@ -71,6 +32,6 @@ var coursesData = [
 
 [[7, "Curso de Iluminação e Renderização"]],
 
-[[8, 0, "Curso 1 de Modelação 3D", 1, 1,"Criador 1","assets/images/mod_h.png"],
- [8, 1, "Curso 2 de Modelação 3D", 1, 1,"Criador 1","assets/images/mod_h.png"]]
+[[8, 0, "Introduction to Modelling in Blender", 6.4, 4.2,"Blender Guru","assets/images/mod_h1.png","https://www.youtube.com/playlist?list=PLjEaoINr3zgEL9UjPTLWQhLFAK7wVaRMR"],
+ [8, 1, "Sculpting in Blender", 1.6, 4.3," FlippedNormals","assets/images/mod_h2.png","https://youtu.be/A-Wq8K8icpQ"]]
 ];
