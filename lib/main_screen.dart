@@ -115,11 +115,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                DetailsScreen(categoryId: index),
+                          PageRouteBuilder(
+                            transitionDuration: Duration(milliseconds: 800),
+                            transitionsBuilder: (BuildContext context,Animation<double> animation, Animation<double> secAnimation, Widget child){
+                              var begin = Offset(0.0, 1.0);
+                              var end = Offset.zero;
+                              var curve = Curves.ease;
+                              var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+                              return SlideTransition(
+                                position: animation.drive(tween),
+                                child: child,
+                              );
+
+                            },
+                            pageBuilder: (BuildContext context,Animation<double> animation, Animation<double> secAnimation){
+                              return DetailsScreen(categoryId: index);
+
+                            },
                           ),
+                          //MaterialPageRoute(builder: (context) =>DetailsScreen(categoryId: index),
                         );
+                        
                       },
                       child: ClipRRect(
                         child: Container(
@@ -150,8 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   Text(
                                     '${categories[index].numOfCourses} Cursos',
                                     style: TextStyle(
-                                      color:
-                                          Color(0xFFffffff).withOpacity(0.80),
+                                      color: Color(0xFFffffff).withOpacity(0.80),
                                     ),
                                   ),
                                 ],
