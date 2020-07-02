@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Navigator.push(
                         context,
                           PageRouteBuilder(
-                            transitionDuration: Duration(milliseconds: 800),
+                            transitionDuration: Duration(milliseconds: 600),
                             transitionsBuilder: (BuildContext context,
                                 Animation<double> animation,
                                 Animation<double> secAnimation,
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           PageRouteBuilder(
-                            transitionDuration: Duration(milliseconds: 800),
+                            transitionDuration: Duration(milliseconds: 600),
                             transitionsBuilder: (BuildContext context,
                                 Animation<double> animation,
                                 Animation<double> secAnimation,
