@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         DeviceOrientation.portraitUp,
       ]);
 
-//SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
+SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
 
 SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 

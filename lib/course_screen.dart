@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import 'package:flutter_app/main_screen.dart';
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/model/courses.dart';
-import 'package:flutter_app/model/category.dart';
 
 class Course_Screen extends StatelessWidget {
   final int categoryId;
   final int courseId;
+
 
   const Course_Screen({Key key, this.categoryId, this.courseId})
       : super(key: key);
@@ -63,12 +62,20 @@ class Course_Screen extends StatelessWidget {
                           Text(coursesData[categoryId][courseId][2],
                               style: kHeadingextStyle),
                           SizedBox(height: 16),
-                          Text(
-                            'By ${coursesData[categoryId][courseId][5]}',
-                            style: TextStyle(
-                              fontSize: 22,
-                              color: Color(0xFFffffff).withOpacity(0.85),
+                          InkWell(
+                            child: Text(
+                              'By ${coursesData[categoryId][courseId][5]}',
+                              style: TextStyle(
+                                fontSize: 22,
+                                decoration: TextDecoration.underline,
+                                color: Color(0xFFffffff).withOpacity(0.85),
+                              ),
                             ),
+                            onTap: () async {
+                              if (await canLaunch("${coursesData[categoryId][courseId][7]}")) {
+                              await launch("${coursesData[categoryId][courseId][7]}");
+                              }
+                            }
                           ),
                         ],
                       ),
@@ -151,7 +158,7 @@ class Course_Screen extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
                                     Text(
-                                      "${index + 1}: Nome da Aula",
+                                      "${index + 1}: Nome do Modulo",
                                       style: kTitleTextMiniStyle,
                                     ),
                                   ],
@@ -174,3 +181,4 @@ class Course_Screen extends StatelessWidget {
     );
   }
 }
+

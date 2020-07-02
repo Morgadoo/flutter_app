@@ -6,11 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
-import 'package:flutter_app/main.dart';
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/second_screen.dart';
+import 'package:flutter_app/profile_screen.dart';
 import 'package:flutter_app/model/category.dart';
-import 'package:flutter_app/model/courses.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -33,25 +32,49 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
+                  SvgPicture.asset('assets/icons/menu.svg',
+                      height: 26, width: 26, color: dIconColor),
                   GestureDetector(
-                    /*onTap: () {
-                    Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DetailsScreen()),
-                    );
-                  },*/
-                    child: SvgPicture.asset('assets/icons/menu.svg',
-                        height: 26, width: 26, color: dIconColor),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                          PageRouteBuilder(
+                            transitionDuration: Duration(milliseconds: 800),
+                            transitionsBuilder: (BuildContext context,
+                                Animation<double> animation,
+                                Animation<double> secAnimation,
+                                Widget child) {
+                              var begin = Offset(1.0, 0.0);
+                              var end = Offset.zero;
+                              var curve = Curves.ease;
+                              var tween = Tween(begin: begin, end: end)
+                                  .chain(CurveTween(curve: curve));
+
+                              return SlideTransition(
+                                position: animation.drive(tween),
+                                child: child,
+                              );
+                            },
+                            pageBuilder: (BuildContext context,
+                                Animation<double> animation,
+                                Animation<double> secAnimation) {
+                              return Profile_Screen();
+                            },
+                          ),
+                      );
+                    },
+                    child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                image: NetworkImage(
+                                  "https://www.rogowaylaw.com/wp-content/uploads/Blank-Employee.jpg")
+                            )
+                        )
+                    ),
                   ),
-                  new Container(
-                      width: 50,
-                      height: 50,
-                      decoration: new BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: new DecorationImage(
-                              image: NetworkImage(
-                                  "https://api.adorable.io/avatars/100/" +
-                                      user)))),
                 ],
               ),
               SizedBox(height: 10),
@@ -84,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     SizedBox(width: 16),
                     Text(
-                      isOpen ? '|' : 'Search for anything',
+                      isOpen ? '|' : 'Pesquisa',
                       style: TextStyle(
                         fontSize: 18,
                         color: isOpen ? dTextColor : dSubTextColor,
@@ -117,26 +140,28 @@ class _MyHomePageState extends State<MyHomePage> {
                           context,
                           PageRouteBuilder(
                             transitionDuration: Duration(milliseconds: 800),
-                            transitionsBuilder: (BuildContext context,Animation<double> animation, Animation<double> secAnimation, Widget child){
+                            transitionsBuilder: (BuildContext context,
+                                Animation<double> animation,
+                                Animation<double> secAnimation,
+                                Widget child) {
                               var begin = Offset(0.0, 1.0);
                               var end = Offset.zero;
                               var curve = Curves.ease;
-                              var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+                              var tween = Tween(begin: begin, end: end)
+                                  .chain(CurveTween(curve: curve));
 
                               return SlideTransition(
                                 position: animation.drive(tween),
                                 child: child,
                               );
-
                             },
-                            pageBuilder: (BuildContext context,Animation<double> animation, Animation<double> secAnimation){
+                            pageBuilder: (BuildContext context,
+                                Animation<double> animation,
+                                Animation<double> secAnimation) {
                               return DetailsScreen(categoryId: index);
-
                             },
                           ),
-                          //MaterialPageRoute(builder: (context) =>DetailsScreen(categoryId: index),
                         );
-                        
                       },
                       child: ClipRRect(
                         child: Container(
@@ -167,7 +192,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   Text(
                                     '${categories[index].numOfCourses} Cursos',
                                     style: TextStyle(
-                                      color: Color(0xFFffffff).withOpacity(0.80),
+                                      color:
+                                          Color(0xFFffffff).withOpacity(0.80),
                                     ),
                                   ),
                                 ],
