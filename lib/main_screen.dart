@@ -69,8 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: new BoxDecoration(
                             shape: BoxShape.circle,
                             image: new DecorationImage(
-                                image: NetworkImage(
-                                  "https://www.rogowaylaw.com/wp-content/uploads/Blank-Employee.jpg")
+                                image:AssetImage("assets/icons/Blank-Employee.jpg")
                             )
                         )
                     ),
