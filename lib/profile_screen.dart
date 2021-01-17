@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 
 
 import 'package:flutter_app/constants.dart';
 
+// ignore: camel_case_types
 class Profile_Screen extends StatelessWidget {
 
   @override

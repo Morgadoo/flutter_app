@@ -7,6 +7,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/model/courses.dart';
 
+// ignore: camel_case_types
 class Course_Screen extends StatelessWidget {
   final int categoryId;
   final int courseId;

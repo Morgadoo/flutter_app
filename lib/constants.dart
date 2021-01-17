@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:palette_generator/palette_generator.dart';
 
 // Colors Light theme
 const kTextColor = Color(0xFF0D1333);

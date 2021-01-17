@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' ;
 
 import 'package:flutter_app/main_screen.dart';
-import 'package:flutter_app/model/courses.dart';
 
 class Todo {
   final String title;
