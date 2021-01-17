@@ -5,4 +5,4 @@ Project for ADM.
 
 # Watch the video:
 
-[(https://i.imgur.com/WsQFm7h.png)])
+[!(https://i.imgur.com/WsQFm7h.png)])
