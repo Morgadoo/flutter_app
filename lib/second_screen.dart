@@ -6,7 +6,6 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:flutter_app/course_screen.dart';
 
-
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/model/courses.dart';
 import 'package:flutter_app/model/category.dart';
@@ -103,34 +102,37 @@ class DetailsScreen extends StatelessWidget {
                             itemCount: categories[categoryId].numOfCourses,
                             mainAxisSpacing: 16,
                             itemBuilder: (context, index) {
-
                               //String nomedocurso = 'courses' + categoryId.toString();
                               return InkWell(
                                 onTap: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                      Course_Screen(categoryId: categoryId,courseId:index),
+                                      builder: (context) => Course_Screen(
+                                          categoryId: categoryId,
+                                          courseId: index),
                                     ),
                                   );
                                 },
                                 child: Container(
                                   padding: EdgeInsets.all(10),
-                                  height: 58 + 140/categories[categoryId].numOfCourses,
+                                  height: 58 +
+                                      140 / categories[categoryId].numOfCourses,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16),
                                     color: dBackGround,
                                     image: DecorationImage(
                                       colorFilter: ColorFilter.mode(
-                                          Color(0xFFbbbbbb), BlendMode.multiply),
+                                          Color(0xFFbbbbbb),
+                                          BlendMode.multiply),
                                       image: AssetImage(
                                           coursesData[categoryId][index][6]),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
