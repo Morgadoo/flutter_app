@@ -3,8 +3,10 @@
 A Flutter project to E-Learning App.\
 Project for ADM.
  
-(click on image to see video)
+
 [![Image](https://i.imgur.com/WsQFm7h.png)](https://youtu.be/_Hrl8sp8hSU)
+
+(click on image to see video)
 
 ## Setup
 Download [Flutter](https://docs.flutter.dev/get-started/install).
